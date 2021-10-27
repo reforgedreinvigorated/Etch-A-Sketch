@@ -32,6 +32,19 @@ function removeAllGridSquares()
 }
 
 const container = document.querySelector(".container");
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(button => button.addEventListener("click", () => 
+{
+    if (button.id = "setsize")
+    {
+        let size = parseInt(prompt("Enter a number between 1 - 100 to set the grid size (ex. 16 would set the grid to be 16x16"));
+        if (size < 1 || size > 100 || isNaN(size))
+            alert("Error: Number must be between 1-100");
+        else
+            setGridSize(size);
+    }
+}))
 
 // Set initial grid size to be 16x16
 setGridSize(16);
